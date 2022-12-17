@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    overflow-x: hidden;
+}
+
+a, a:visited, a:link {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(160deg, #3d7fa1 0%, #355f75 100%);
+}
+
+.title__text {
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 2px 4px rgb(0, 0, 0, .2);
+}
+
+.container-md {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.27);
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: .2px solid rgba( 255, 255, 255, 0.2);
+    padding: 20px 0 0 0 !important;
+}
+
+.my__container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.home-btn {
+    margin-right: 10px;
+}
+
+.arrow {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.my__col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.desc__text {
+    font-size: 16px;
+}
+
+.col {
+    object-fit: contain;
+    padding: 2px;
+}
+
+.row .col img {
+    width: 100%;
+    height: 100%;
+    background-color: #3d7fa1;
+    border-radius: 10px;
+}
+
+.wrap__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 20px 0;
+    background-color: rgb(217, 217, 217);
+}
+
+@media screen and (max-width: 400px) {
+    .my__container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .my__container {
+        width: 100%;
+    }
+}

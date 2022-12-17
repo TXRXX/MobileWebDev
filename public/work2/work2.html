@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="work2.css" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+        />
+
+        <!-- VUE CDN -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+            rel="stylesheet"
+        />
+
+        <title>WORK 2 : VUE</title>
+    </head>
+    <body>
+        <div id="app">
+            <v-app>
+                <v-main>
+                    <v-container>
+                        <v-card>
+                            <v-card-title>{{title}}</v-card-title>
+                            <v-card-text>
+                                <template v-if="state == 0">
+                                    <v-btn @click="shuffle()">PLAY</v-btn>
+                                </template>
+                                <template v-if="state == 1">
+                                    <v-row>
+                                        <v-col
+                                            cols="2"
+                                            v-for="(c,i) of cards"
+                                            class="text-center"
+                                        >
+                                            <img
+                                                v-if="c.s==0"
+                                                src="./img/0.jpg"
+                                                width="80px"
+                                                height="80px"
+                                                @click="imgclick(c)"
+                                            />
+                                            <img
+                                                v-if="c.s==1"
+                                                :src="'./img/'+c.t+'.png'"
+                                                width="80px"
+                                                height="80px"
+                                            />
+                                        </v-col>
+                                    </v-row>
+                                    <v-btn @click="state = 0">STOP</v-btn>
+                                </template>
+                                <template v-if="state == 2">
+                                    <h1>YOU WON</h1>
+                                    <v-btn @click="state = 0">OK</v-btn>
+                                </template>
+                                <a href="../index.html">
+                                    <v-btn>HOME</v-btn>
+                                </a>
+                            </v-card-text>
+                            <v-bottom-navigation
+                                >{{footer}}</v-bottom-navigation
+                            >
+                        </v-card>
+                    </v-container>
+                </v-main>
+            </v-app>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    </body>
+    <script src="./work2.js"></script>
+</html>
