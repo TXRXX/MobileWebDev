@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+.home__btn {
+    text-decoration: none;
+    color: white;
+    background-color: #2f2f2f;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.home__btn:hover {
+    background-color: #3c3c3c;
+}
